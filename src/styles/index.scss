@@ -1,0 +1,63 @@
+/* IMPORTS */
+
+// ASSETS
+@import "variables";
+@import "mixins";
+@import "templates";
+
+// PAGES
+@import "header";
+@import "main";
+@import "footer";
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// AWESOME FONTS
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
+/* IMPORTS END*/
+
+/* GLOBAL SETTINGS */
+
+.body {
+  background: $colorBody;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  .container {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+a {
+  text-decoration: none;
+  @extend %defaultText;
+  color: #363533;
+  &:hover {
+    color: $colorMain;
+    transition: 0.2s;
+  }
+}
+
+button {
+  color: #ffffff;
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+input {
+  padding: $size15;
+}
+
+/* GLOBAL SETTINGS END */
+
+
+
+
+
+
+

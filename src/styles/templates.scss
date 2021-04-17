@@ -1,0 +1,54 @@
+@import "variables";
+
+/* TEMPLATES */
+
+%headerTopSocial {
+  .header__top_items {
+    margin: 0;
+    height: $heightFull;
+  }
+
+  ul.header__top_items {
+    padding: 0;
+
+    li {
+      display: inline-block;
+      color: $colorWhite;
+      padding: 8px 12px;
+      height: $heightFull;
+      a {
+        color: $colorWhite;
+        font-size: 12px;
+      }
+    }
+  }
+}
+%defaultText {
+  color: $colorBlack;
+  font-family: 'Roboto', sans-serif;
+}
+%priceDesc {
+  .price-desc {
+    font-size: 14px;
+    color: $colorGrey;
+    margin-bottom: $size15;
+
+    &:last-of-type {
+      margin-bottom: $size10;
+    }
+  }
+}
+%deliveryCardsTitle {
+  .delivery__cards_title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $size10;
+    border-radius: 4px;
+
+    .delivery__card_title {
+      font-size: 18px;
+      color: #4a4c4e;
+      text-align: center;
+    }
+  }
+}

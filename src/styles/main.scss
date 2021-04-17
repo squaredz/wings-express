@@ -1,0 +1,211 @@
+@import 'variables';
+@import 'mixins';
+@import 'templates';
+
+/* DELIVERY START */
+
+.delivery {
+  background: rgba(0, 0, 0, 0.35) url('../assets/images/delivery.jpg') no-repeat fixed center;
+  width: 100%;
+  min-height: 750px;
+  position: relative;
+  background-size: cover;
+  box-shadow: 7px 2px 7px 1px rgba(0, 0, 0, 0.35);
+
+  .delivery-bg {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.70);
+    height: $heightFull;
+    width: $widthFull;
+
+    .delivery__cards {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 12rem;
+      width: 100%;
+
+      .delivery__cost_body {
+        @include card(rgba(255, 255, 255, 0.9), 495px);
+        @extend %deliveryCardsTitle;
+        @include lineBg(80%, 5px, $size15, 30%);
+
+
+        .delivery__cost_title {
+          margin-top: 20px;
+        }
+
+        .delivery__input {
+          width: $widthFull;
+          margin-bottom: 20px;
+
+          input {
+            $length: $size15;
+            padding: $length;
+          }
+
+          .delivery-map-icon {
+            display: flex;
+            border: 1px solid #ccc;
+
+            .fa-map-marker-alt {
+              margin: auto;
+            }
+          }
+        }
+
+        .delivery__route-btn {
+          margin: 1px auto;
+
+          i {
+            margin-right: 5px;
+          }
+
+          button {
+            padding: 20px 25px;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+
+            &:first-of-type {
+              background: $colorMain;
+              color: white;
+            }
+
+            &:last-of-type {
+              color: white;
+              background: #363533;
+            }
+          }
+        }
+
+        h2 {
+          font-weight: lighter;
+          outline-width: $size10;
+          margin-bottom: 30px;
+        }
+
+        span {
+          font-size: 46px;
+          margin-bottom: $size15;
+          text-align: center;
+
+          i {
+            color: $colorGrey;
+            font-size: 18px;
+          }
+        }
+
+        .delivery-decor-btn {
+          width: 100%;
+          line-height: 1.5;
+          padding: $size15 70px;
+          color: white;
+          background: $colorMain;
+          font-weight: lighter;
+          margin-bottom: $size15;
+        }
+
+        @extend %priceDesc;
+      }
+
+
+      .delivery__tracking_body {
+        @include card(rgba(255, 255, 255, 0.9), 495px);
+        @extend %deliveryCardsTitle;
+        @include lineBg(80%, 5px, $size15, 30%);
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .delivery__tracking {
+          margin: $size15 0 auto;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          @extend %priceDesc;
+        }
+      }
+
+      .delivery__tracking {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        @extend %deliveryCardsTitle;
+
+        .delivery__card_search {
+          margin-bottom: $size15;
+          width: $widthFull;
+
+          input {
+            padding: $size15;
+          }
+
+          button {
+            color: white;
+            background: $colorMain;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+          }
+        }
+
+        @extend %priceDesc;
+
+      }
+    }
+  }
+}
+
+/* DELIVERY END */
+
+/* EXCELLENCE START */
+
+.excellence {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: $widthFull;
+  min-height: 300px;
+
+  .excellence__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 34px;
+    }
+
+    @include lineBg(40%, 40px, 30px, 38%);
+
+    .excellence__about {
+      width: 70%;
+      color: $colorGrey;
+    }
+  }
+
+  .ui.icon.message {
+    opacity: 0.92;
+    width: 55%;
+    margin: 60px auto;
+    background: $colorWhite;
+    border: 1px solid rgba($colorMain, 80%);
+    -webkit-box-shadow: none;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+      border: 1px solid rgba($colorMain, 100%);
+    }
+
+    i {
+      font-size: 40px;
+      color: $colorMain;
+    }
+  }
+}

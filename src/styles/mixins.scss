@@ -1,0 +1,46 @@
+@import "variables";
+
+/* MIXINS */
+
+@mixin lineBg($w, $mt, $mb, $bgw) {
+  .line {
+    border-top: 1px solid #cccccc;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: $w;
+    margin-top: $mt;
+    margin-bottom: $mb;
+
+    .line-bg {
+      position: absolute;
+      background: $colorMain;
+      width: $bgw;
+      height: 3px;
+      margin-top: -2px;
+    }
+  }
+}
+
+@mixin card($bg, $width) {
+  background: $bg;
+  min-height: 10px;
+  width: $width;
+  border-radius: 4px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin footerItem($colorBg, $colorText) {
+  cursor: pointer;
+  opacity: 1;
+  background: $colorBg;
+  i {
+    color: $colorText;
+  }
+
+}
+
